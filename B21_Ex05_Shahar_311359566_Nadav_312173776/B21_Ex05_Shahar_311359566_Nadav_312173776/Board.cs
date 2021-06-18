@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 
-namespace B21_Ex02_Shahar_311359566_Nadav_312173776
+namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 {
     public class Board
     {

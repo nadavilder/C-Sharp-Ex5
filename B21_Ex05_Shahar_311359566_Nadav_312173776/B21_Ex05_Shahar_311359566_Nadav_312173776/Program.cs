@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace B21_Ex02_Shahar_311359566_Nadav_312173776
+namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 {
     public class Program
     {
@@ -12,10 +12,13 @@ namespace B21_Ex02_Shahar_311359566_Nadav_312173776
 
         public static void Main(string[] args)
         {
-            InitializeGame();
+            
+
+            FormSettings fs = new FormSettings();
+            fs.ShowDialog();
         }
 
-        private static void InitializeGame()
+        public static void InitializeGame()
         {
             bool playing = true;
             while (playing)

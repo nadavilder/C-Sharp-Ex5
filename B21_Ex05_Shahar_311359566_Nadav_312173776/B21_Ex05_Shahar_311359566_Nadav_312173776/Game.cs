@@ -2,10 +2,26 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace B21_Ex02_Shahar_311359566_Nadav_312173776
+namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 {
     class Game
     {
+        static Player m_Player1=null;
+        static Player m_Player2 =null;
+        static Board m_Board = null;
+        public static void CreatePlayer1(string i_Name)
+        {
+            m_Player1 = new Player(i_Name);
+        }
+        public static void CreatePlayer2(string i_Name)
+        {
+            m_Player2 = new Player(i_Name);
+        }
+
+        public static void CreateBoard(int i_Size)
+        {
+            m_Board = new Board(i_Size);
+        }
         public static Move GetPlayerMove(out bool o_ContinueGame)
         {
             Move playerMove = null;
@@ -76,7 +92,7 @@ namespace B21_Ex02_Shahar_311359566_Nadav_312173776
                 {
                     newGame = true;
                     checking = false;
-                    Ex02.ConsoleUtils.Screen.Clear();
+                   // Ex02.ConsoleUtils.Screen.Clear();
                 }
                 else if (answer == "N")
                 {

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace B21_Ex02_Shahar_311359566_Nadav_312173776
+namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 {
     public class UI
     {
         public static void BoardPrinter(Board i_Board)
         {
-            Ex02.ConsoleUtils.Screen.Clear();
+           // Ex02.ConsoleUtils.Screen.Clear();
             StringBuilder rowBuilder = new StringBuilder();
 
             for (int i = 1; i <= i_Board.BoardSize; i++)

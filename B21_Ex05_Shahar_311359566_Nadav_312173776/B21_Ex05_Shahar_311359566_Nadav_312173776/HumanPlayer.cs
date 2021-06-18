@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace B21_Ex02_Shahar_311359566_Nadav_312173776
+namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 {
     class HumanPlayer
     {
