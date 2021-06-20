@@ -6,15 +6,15 @@ using System.Windows.Forms;
 
 namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 {
-   public partial class FormSettings : Form
+    public partial class Form1 : Form
     {
-       
-        public FormSettings()
+
+        public Form1()
         {
             InitializeComponent();
         }
 
-       
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -24,6 +24,9 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
                 Game.CreatePlayer2(this.textBox1.Text);
             }
             Game.CreateBoard((int)this.numericUpDown1.Value);
+            FormUI newGame = new FormUI(this);
+            newGame.ShowDialog();
+            
             //Program.InitializeGame();
 
         }
@@ -46,7 +49,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 
         }
 
-        private void numericUpDown1_Changed(object sender, EventArgs e) 
+        private void numericUpDown1_Changed(object sender, EventArgs e)
         {
             this.numericUpDown2.Value = this.numericUpDown1.Value;
         }
@@ -58,5 +61,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         {
 
         }
+
+     
     }
 }

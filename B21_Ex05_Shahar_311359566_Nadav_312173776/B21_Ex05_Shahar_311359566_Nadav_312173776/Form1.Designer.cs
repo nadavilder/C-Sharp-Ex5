@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 {
-    public partial class FormSettings:Form
+    public partial class Form1:Form
     {
         private Label label2;
         private TextBox textBox1;
@@ -19,10 +19,11 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         private Button button1;
         private Label label5;
         private Label label6;
-        
-    
-       public void InitializeComponent()
+
+
+        public void InitializeComponent()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -46,7 +47,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.label2.Size = new System.Drawing.Size(64, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Player 1:";
-           
+
             // 
             // textBox1
             // 
@@ -195,7 +196,11 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.PerformLayout();
 
         }
+        public int GameSize
+        {
+            get { return (int)numericUpDown1.Value; }
+        }
 
-      
+
     }
 }
