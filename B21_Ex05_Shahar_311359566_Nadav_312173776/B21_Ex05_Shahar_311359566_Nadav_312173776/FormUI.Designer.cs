@@ -26,14 +26,16 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         {
             m_Player1 = new Label();
             m_Player1.Location = new Point(((r_GameSize / 2)-1) * 70+10, r_GameSize * 70 );
-           // m_Player2.Text = $"{Game.Player1.PlayerName}: {Game.Player1.PlayerPoints}";
-            m_Player1.Text = "nadav: 0";
+           
+           
+           m_Player1.Text = $"{Game.Player1.PlayerName}: {Game.Player1.PlayerPoints}";
+           // m_Player1.Text = "nadav: 1";
             m_Player1.AutoSize = true;
             //
             m_Player2 = new Label();
             m_Player2.Location = new Point((r_GameSize / 2) * 70+10, r_GameSize * 70 );
-            //  m_Player2.Text = $"{Game.Player2.PlayerName}: {Game.Player1.PlayerPoints}";
-            m_Player2.Text = "nadav: 0";
+            m_Player2.Text = $"{Game.Player2.PlayerName}: {Game.Player2.PlayerPoints}";
+           // m_Player2.Text = "nadav: 1";
             m_Player2.AutoSize = true;
             this.Controls.Add(m_Player1);
             this.Controls.Add(m_Player2);

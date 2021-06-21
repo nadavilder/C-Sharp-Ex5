@@ -16,6 +16,9 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 
             Form1 fs = new Form1();
             fs.ShowDialog();
+            FormUI newGame = new FormUI(fs);
+            newGame.ShowDialog();
+
         }
 
         public static void InitializeGame()

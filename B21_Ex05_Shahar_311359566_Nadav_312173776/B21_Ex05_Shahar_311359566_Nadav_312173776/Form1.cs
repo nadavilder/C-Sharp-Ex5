@@ -21,11 +21,9 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             Game.CreatePlayer1(this.textBox1.Text);
             if (this.checkBox1.Checked)
             {
-                Game.CreatePlayer2(this.textBox1.Text);
+                Game.CreatePlayer2(this.textBox2.Text);
             }
             Game.CreateBoard((int)this.numericUpDown1.Value);
-            FormUI newGame = new FormUI(this);
-            newGame.ShowDialog();
             
             //Program.InitializeGame();
 
