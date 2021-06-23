@@ -18,6 +18,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+            this.DialogResult = DialogResult.OK;
             string[] playerNames = { this.textBox1.Text, this.textBox2.Text };
             if (this.checkBox1.Checked)
             {

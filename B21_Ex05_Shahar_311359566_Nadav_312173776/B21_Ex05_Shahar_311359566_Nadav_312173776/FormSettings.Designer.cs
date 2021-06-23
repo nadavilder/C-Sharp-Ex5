@@ -9,16 +9,16 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
     public partial class FormSettings:Form
     {
         private Label label2;
+        private Label label5;
+        private Label label6;
+        private Label label4;
+        private Label label3;
         private TextBox textBox1;
         private TextBox textBox2;
-        private Label label4;
         private CheckBox checkBox1;
-        private Label label3;
         private NumericUpDown numericUpDown1;
         private NumericUpDown numericUpDown2;
         private Button button1;
-        private Label label5;
-        private Label label6;
 
 
         public void InitializeComponent()

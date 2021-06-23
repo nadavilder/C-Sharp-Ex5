@@ -21,7 +21,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         {
             r_GameSize = i_FormSettings.GameSize;
             r_ButtomsNumber = r_GameSize * r_GameSize;
-            m_controls = new Control[r_ButtomsNumber + 2];
+            m_controls = new Control[r_ButtomsNumber];
             m_GameButtons = new Button[r_ButtomsNumber];
             this.FormBorderStyle = FormBorderStyle.Fixed3D;
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -62,7 +62,6 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             }
 
         }
-
 
 
         private void m_button_Click(object sender, EventArgs e) {
