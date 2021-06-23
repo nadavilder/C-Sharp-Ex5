@@ -132,7 +132,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         public bool CheckTie()
         {
             double turns = Math.Pow(m_BoardSize, 2) - 1;
-            return Program.TurnNum == (int)turns;
+            return Game.TurnNum == (int)turns;
         }
 
       
@@ -154,12 +154,13 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 
             return availableMoves;
         }
-        public void MakeMachineMove()
+        public Move MakeMachineMove()
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             List<Move> availableMoves = this.GetAvailableMoves();
             Move chosenMove = availableMoves[rand.Next(availableMoves.Count)];
             this.UpdateBoard(chosenMove);
+            return chosenMove;
         }
 
 

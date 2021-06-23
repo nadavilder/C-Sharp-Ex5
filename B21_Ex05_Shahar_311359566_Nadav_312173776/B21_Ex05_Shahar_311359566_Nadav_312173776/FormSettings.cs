@@ -6,10 +6,10 @@ using System.Windows.Forms;
 
 namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 {
-    public partial class Form1 : Form
+    public partial class FormSettings : Form
     {
 
-        public Form1()
+        public FormSettings()
         {
             InitializeComponent();
         }
@@ -18,14 +18,17 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            Game.CreatePlayer1(this.textBox1.Text);
+            string[] playerNames = { this.textBox1.Text, this.textBox2.Text };
             if (this.checkBox1.Checked)
             {
-                Game.CreatePlayer2(this.textBox2.Text);
+                Game.CreatePlayers(playerNames, true);
+            }
+            else
+            {
+                Game.CreatePlayers(playerNames, false);
             }
             Game.CreateBoard((int)this.numericUpDown1.Value);
             
-            //Program.InitializeGame();
 
         }
 

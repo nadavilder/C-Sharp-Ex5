@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 {
-    public partial class Form1:Form
+    public partial class FormSettings:Form
     {
         private Label label2;
         private TextBox textBox1;
@@ -65,7 +65,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(125, 27);
             this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "[Computer]";
+            this.textBox2.Text = "Computer";
             // 
             // label4
             // 
@@ -100,12 +100,12 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(118, 168);
             this.numericUpDown1.Maximum = new decimal(new int[] {
-            10,
+            9,
             0,
             0,
             0});
             this.numericUpDown1.Minimum = new decimal(new int[] {
-            4,
+            3,
             0,
             0,
             0});
@@ -115,7 +115,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.numericUpDown1.ThousandsSeparator = true;
             this.numericUpDown1.Click += numericUpDown1_Changed;
             this.numericUpDown1.Value = new decimal(new int[] {
-            4,
+            3,
             0,
             0,
             0});
@@ -124,12 +124,12 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             // 
             this.numericUpDown2.Location = new System.Drawing.Point(243, 168);
             this.numericUpDown2.Maximum = new decimal(new int[] {
-            10,
+            9,
             0,
             0,
             0});
             this.numericUpDown2.Minimum = new decimal(new int[] {
-            4,
+            3,
             0,
             0,
             0});
@@ -139,7 +139,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.numericUpDown2.ThousandsSeparator = true;
             this.numericUpDown2.Click += numericUpDown2_Changed;
             this.numericUpDown2.Value = new decimal(new int[] {
-            4,
+            3,
             0,
             0,
             0});

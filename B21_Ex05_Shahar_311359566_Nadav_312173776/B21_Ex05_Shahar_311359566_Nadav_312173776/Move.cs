@@ -20,7 +20,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         public static eTurn GetTurn()
         {
             eTurn symbol = eTurn.X;
-            if (Program.TurnNum % 2 == 1)
+            if (Game.TurnNum % 2 == 1)
             {
                 symbol = eTurn.O;
             }

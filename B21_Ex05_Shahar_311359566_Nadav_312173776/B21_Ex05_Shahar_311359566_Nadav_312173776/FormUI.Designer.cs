@@ -24,21 +24,21 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 
         private void createPlayersLabels()
         {
-            m_Player1 = new Label();
-            m_Player1.Location = new Point(((r_GameSize / 2)-1) * 70+10, r_GameSize * 70 );
+            m_Player1Label = new Label();
+            m_Player1Label.Location = new Point(((r_GameSize / 2)-1) * 70+10, r_GameSize * 70 );
            
            
-           m_Player1.Text = $"{Game.Player1.PlayerName}: {Game.Player1.PlayerPoints}";
+           m_Player1Label.Text = $"{Game.Player1.PlayerName}: {Game.Player1.PlayerPoints}";
            // m_Player1.Text = "nadav: 1";
-            m_Player1.AutoSize = true;
+            m_Player1Label.AutoSize = true;
             //
-            m_Player2 = new Label();
-            m_Player2.Location = new Point((r_GameSize / 2) * 70+10, r_GameSize * 70 );
-            m_Player2.Text = $"{Game.Player2.PlayerName}: {Game.Player2.PlayerPoints}";
+            m_Player2Label = new Label();
+            m_Player2Label.Location = new Point((r_GameSize / 2) * 70+10, r_GameSize * 70 );
+            m_Player2Label.Text = $"{Game.Player2.PlayerName}: {Game.Player2.PlayerPoints}";
            // m_Player2.Text = "nadav: 1";
-            m_Player2.AutoSize = true;
-            this.Controls.Add(m_Player1);
-            this.Controls.Add(m_Player2);
+            m_Player2Label.AutoSize = true;
+            this.Controls.Add(m_Player1Label);
+            this.Controls.Add(m_Player2Label);
 
         }
 
@@ -46,12 +46,12 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         {
             for (int i = 0; i < r_ButtomsNumber; i++)
             {
-                m_GameBoard[i] = new Button();
-                m_GameBoard[i].Width = 60;
-                m_GameBoard[i].Height = 60;
-                m_GameBoard[i].Location = new Point((i % r_GameSize * 70) + 10, (i / r_GameSize * 70) + 10);
-                m_GameBoard[i].Click += new EventHandler(m_button_Click);
-                m_controls[i] = m_GameBoard[i];
+                m_GameButtons[i] = new Button();
+                m_GameButtons[i].Width = 60;
+                m_GameButtons[i].Height = 60;
+                m_GameButtons[i].Location = new Point((i % r_GameSize * 70) + 10, (i / r_GameSize * 70) + 10);
+                m_GameButtons[i].Click += new EventHandler(m_button_Click);
+                m_controls[i] = m_GameButtons[i];
             }
         }
     }

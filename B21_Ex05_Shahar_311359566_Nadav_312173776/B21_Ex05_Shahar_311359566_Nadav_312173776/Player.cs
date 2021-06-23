@@ -7,14 +7,17 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 {
     class Player
     {
-        private string m_Name;
+        private readonly string r_Name;
         private int m_Points;
+        private bool m_HumanPlayer;
         
 
-        public Player(string i_Name)
+        public Player(string i_Name, bool i_HumanPlayer)
         {
-            m_Name = i_Name;
+            r_Name = i_Name;
             m_Points = 0;
+            m_HumanPlayer = i_HumanPlayer;
+
         }
 
         public int PlayerPoints
@@ -26,8 +29,12 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 
         public string PlayerName
         {
-            get { return m_Name; }
-            set { m_Name = value; }
+            get { return r_Name; }
+        }
+
+        public bool IsHumanPlayer
+        {
+            get { return m_HumanPlayer; }
         }
 
     }
