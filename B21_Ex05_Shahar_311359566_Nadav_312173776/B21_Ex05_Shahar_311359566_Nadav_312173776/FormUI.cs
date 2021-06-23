@@ -29,7 +29,10 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         }
 
         private void m_button_Click(object sender, EventArgs e) {
-
+            Button buttonWasClicked = (Button)sender;
+            int rowIndex = Array.IndexOf(m_GameBoard, buttonWasClicked)/ r_GameSize;
+            int colIndex = Array.IndexOf(m_GameBoard, buttonWasClicked) % r_GameSize;
+            buttonWasClicked.Enabled = false;
 
         }
 
