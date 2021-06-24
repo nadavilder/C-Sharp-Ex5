@@ -25,11 +25,11 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         private void createPlayersLabels()
         {
             m_Player1Label = new Label();
-            m_Player1Label.Location = new Point(this.ClientSize.Width / 2 +20, this.ClientSize.Height - 25);
+            m_Player1Label.Location = new Point(this.ClientSize.Width / 2 -70, this.ClientSize.Height - 25);
            m_Player1Label.Text = $"{Game.Player1.PlayerName}: {Game.Player1.PlayerPoints}";
             m_Player1Label.AutoSize = true;
             m_Player2Label = new Label();
-            m_Player2Label.Location = new Point(this.ClientSize.Width/2 -70, this.ClientSize.Height-25);
+            m_Player2Label.Location = new Point(this.ClientSize.Width/2 +20, this.ClientSize.Height-25);
             m_Player2Label.Text = $"{Game.Player2.PlayerName}: {Game.Player2.PlayerPoints}";
             m_Player2Label.AutoSize = true;
             this.Controls.Add(m_Player1Label);
