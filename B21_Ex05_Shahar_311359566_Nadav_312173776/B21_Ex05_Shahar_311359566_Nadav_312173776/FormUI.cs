@@ -10,8 +10,8 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 {
     public partial class FormUI : Form
     {
-        private int r_GameSize;
-        private int r_ButtomsNumber;
+        private readonly int r_GameSize;
+        private readonly int r_ButtomsNumber;
         private Label m_Player1Label;
         private Label m_Player2Label;
         public static Button[] m_GameButtons;
@@ -31,7 +31,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 
         public void NewTurn()
         {
-            if(Game.TurnNum%2 == 0)
+            if(Game.TurnNum % 2 == 0)
             {
                 m_Player1Label.Font = new Font(m_Player1Label.Font, FontStyle.Bold);
                 m_Player2Label.Font = new Font(m_Player2Label.Font, FontStyle.Regular);
@@ -41,36 +41,31 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
                 m_Player1Label.Font = new Font(m_Player2Label.Font, FontStyle.Regular);
                 m_Player2Label.Font = new Font(m_Player2Label.Font, FontStyle.Bold);
             }
-            //Buttons that were pressed should not be enabled
-            foreach( Button button in m_GameButtons)
+
+            foreach(Button button in m_GameButtons)
             {
-                if(button.Text == "")
-                {
-                    button.Enabled = true;
-                }
+
+                button.Enabled = true;
             }
         }
 
         public void EndGame(string i_Message)
         {
             this.Close();
-            DialogResult result = MessageBox.Show(i_Message,"",  MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show(i_Message, "",  MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 Game.NewGame();
-
             }
-
         }
-
 
         private void m_button_Click(object sender, EventArgs e) {
             Button buttonWasClicked = (Button)sender;
-            int rowIndex = Array.IndexOf(m_GameButtons, buttonWasClicked)/ r_GameSize;
+            int rowIndex = Array.IndexOf(m_GameButtons, buttonWasClicked) / r_GameSize;
             int colIndex = Array.IndexOf(m_GameButtons, buttonWasClicked) % r_GameSize;
             if(Game.MakeMove(rowIndex, colIndex))
             {
-                if(Game.TurnNum%2 == 0)
+                if(Game.TurnNum % 2 == 0)
                 {
                     buttonWasClicked.Text = "X";
                 }
@@ -78,22 +73,22 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
                 {
                     buttonWasClicked.Text = "O";
                 }
+
                 buttonWasClicked.Font = new Font(buttonWasClicked.Font, FontStyle.Bold);
                 foreach (Button button in m_GameButtons)
                 {
                     button.Enabled = false;
                 }
+
                 Game.NextTurn();
             }
         }
 
         public void UpdateButton(int i_Row, int i_Column)
         {
-            int buttonIdx = i_Row * r_GameSize + i_Column;
+            int buttonIdx = (i_Row * r_GameSize) + i_Column;
             m_GameButtons[buttonIdx].Text = "O";
             m_GameButtons[buttonIdx].Font = new Font(m_GameButtons[buttonIdx].Font, FontStyle.Bold);
         }
-
-
     }
 }

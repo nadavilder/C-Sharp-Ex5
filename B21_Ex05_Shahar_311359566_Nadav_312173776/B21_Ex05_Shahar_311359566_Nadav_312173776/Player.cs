@@ -3,27 +3,23 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace B21_Ex05_Shahar_311359566_Nadav_312173776
-
 {
-    class Player
+    public class Player
     {
         private readonly string r_Name;
+        private readonly bool r_HumanPlayer;
         private int m_Points;
-        private bool m_HumanPlayer;
         
-
         public Player(string i_Name, bool i_HumanPlayer)
         {
             r_Name = i_Name;
             m_Points = 0;
-            m_HumanPlayer = i_HumanPlayer;
-
+            r_HumanPlayer = i_HumanPlayer;
         }
 
         public int PlayerPoints
         {
             get { return m_Points; }
-
             set { m_Points = value; }
         }
 
@@ -34,8 +30,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 
         public bool IsHumanPlayer
         {
-            get { return m_HumanPlayer; }
+            get { return r_HumanPlayer; }
         }
-
     }
 }

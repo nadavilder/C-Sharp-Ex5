@@ -5,28 +5,28 @@ using System.Windows.Forms;
 
 namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 {
-    class Game
+    public class Game
     {
-        static Player[] m_Players = new Player[2];
-        static Board m_Board = null;
-        private static int m_TurnNum;
+        private static readonly Player[] r_Players = new Player[2];
+        private static Board m_Board;
         private static int m_BoardSize;
+        private static int m_TurnNum;
         private static FormUI m_GameUI;
         private static FormSettings m_FormSettings;
+
         public static void CreatePlayers(string[] i_Names, bool i_Multiplayer)
         {
             if (i_Multiplayer)
             {
-                m_Players[0] = new Player(i_Names[0], true);
-                m_Players[1] = new Player(i_Names[1], true);
+                r_Players[0] = new Player(i_Names[0], true);
+                r_Players[1] = new Player(i_Names[1], true);
             }
             else
             {
-                m_Players[0] = new Player(i_Names[0], true);
-                m_Players[1] = new Player(i_Names[1], false);
+                r_Players[0] = new Player(i_Names[0], true);
+                r_Players[1] = new Player(i_Names[1], false);
             }
         }
-
 
         public static void CreateBoard(int i_Size)
         {
@@ -52,10 +52,10 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
                 m_GameUI.Close();
                 m_GameUI.Dispose();
             }
+
             m_GameUI = new FormUI(m_FormSettings);
             m_GameUI.ShowDialog();
         }
-
 
         public static bool MakeMove(int i_Row, int i_Col)
         {
@@ -68,20 +68,21 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         {
             if (m_Board.CheckLose())
             {
-                m_Players[(m_TurnNum + 1) % 2].PlayerPoints++;
+                r_Players[(m_TurnNum + 1) % 2].PlayerPoints++;
                 m_GameUI.EndGame("Lose");
-
-            }else if (m_Board.CheckTie())
+            }
+            else if (m_Board.CheckTie())
             {
                 m_GameUI.EndGame("Tie");
             }
             else
             {
                 m_TurnNum++;
-                if (!m_Players[m_TurnNum % 2].IsHumanPlayer)
+                if (!r_Players[m_TurnNum % 2].IsHumanPlayer)
                 {
                     MakeAiMove();
                 }
+
                 m_GameUI.NewTurn();
             }
         }
@@ -91,17 +92,16 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             Move machineMove = m_Board.MakeMachineMove();
             m_GameUI.UpdateButton(machineMove.Row, machineMove.Column);
             m_TurnNum++;
-
         }
-
        
         public static Player Player1
         {
-            get { return m_Players[0]; }
+            get { return r_Players[0]; }
         }
+
         public static Player Player2
         {
-            get { return m_Players[1]; }
+            get { return r_Players[1]; }
         }
 
         public static int TurnNum

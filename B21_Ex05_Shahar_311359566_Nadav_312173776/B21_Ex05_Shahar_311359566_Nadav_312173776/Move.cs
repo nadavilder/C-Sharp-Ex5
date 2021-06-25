@@ -6,14 +6,14 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 {
     public class Move
     {
-        private int m_Row;
-        private int m_Column;
+        private readonly int r_Row;
+        private readonly int r_Column;
         private eTurn m_Turn;
 
         public Move(int i_row, int i_column)
         {
-            m_Row = i_row;
-            m_Column = i_column;
+            r_Row = i_row;
+            r_Column = i_column;
             m_Turn = GetTurn();
         }
 
@@ -37,12 +37,12 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 
         public int Row
         {
-            get { return m_Row; }
+            get { return r_Row; }
         }
 
         public int Column
         {
-            get { return m_Column; }
+            get { return r_Column; }
         }
 
         public eTurn Turn
