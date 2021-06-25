@@ -113,6 +113,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.numericUpDown1.Size = new System.Drawing.Size(45, 27);
             this.numericUpDown1.TabIndex = 8;
             this.numericUpDown1.ThousandsSeparator = true;
+            this.numericUpDown1.ReadOnly = true;
             this.numericUpDown1.Click += numericUpDown1_Changed;
             this.numericUpDown1.Value = new decimal(new int[] {
             3,
@@ -137,6 +138,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.numericUpDown2.Size = new System.Drawing.Size(45, 27);
             this.numericUpDown2.TabIndex = 9;
             this.numericUpDown2.ThousandsSeparator = true;
+            this.numericUpDown2.ReadOnly = true;
             this.numericUpDown2.Click += numericUpDown2_Changed;
             this.numericUpDown2.Value = new decimal(new int[] {
             3,
