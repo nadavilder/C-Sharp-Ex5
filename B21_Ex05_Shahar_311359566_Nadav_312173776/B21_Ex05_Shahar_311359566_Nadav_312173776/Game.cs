@@ -80,10 +80,15 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
                 m_TurnNum++;
                 if (!r_Players[m_TurnNum % 2].IsHumanPlayer)
                 {
+                    //Check why name won't be bold
+                    m_GameUI.NewTurn(false);
                     MakeAiMove();
                 }
+                else
+                {
+                    m_GameUI.NewTurn(true);
+                }
 
-                m_GameUI.NewTurn();
             }
         }
 
@@ -91,7 +96,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         {
             Move machineMove = m_Board.MakeMachineMove();
             m_GameUI.UpdateButton(machineMove.Row, machineMove.Column);
-            m_TurnNum++;
+            NextTurn();
         }
        
         public static Player Player1

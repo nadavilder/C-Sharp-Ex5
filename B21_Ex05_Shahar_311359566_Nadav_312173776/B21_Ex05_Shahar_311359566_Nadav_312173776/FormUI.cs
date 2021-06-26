@@ -26,10 +26,10 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.FormBorderStyle = FormBorderStyle.Fixed3D;
             this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
-            NewTurn();
+            NewTurn(true);
         }
 
-        public void NewTurn()
+        public void NewTurn(bool i_HumanTurn)
         {
             if(Game.TurnNum % 2 == 0)
             {
@@ -41,18 +41,40 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
                 m_Player1Label.Font = new Font(m_Player2Label.Font, FontStyle.Regular);
                 m_Player2Label.Font = new Font(m_Player2Label.Font, FontStyle.Bold);
             }
-
-            foreach(Button button in m_GameButtons)
+            if (i_HumanTurn)
             {
-
-                button.Enabled = true;
+                foreach(Button button in m_GameButtons)
+                {
+                    if(button.Text == String.Empty)
+                    {
+                        button.Enabled = true;
+                    }
+                }
             }
         }
 
         public void EndGame(string i_Message)
         {
             this.Close();
-            DialogResult result = MessageBox.Show(i_Message, "",  MessageBoxButtons.YesNo);
+            string message = "";
+            switch (i_Message)
+            {
+                case "Lose":
+                    if ((Game.TurnNum + 1) % 2 == 0)
+                    {
+                        message = $"The winner is {Game.Player1.PlayerName}!{Environment.NewLine}Would you like to play another round?";
+                    }
+                    else
+                    {
+                        message = $"The winner is {Game.Player2.PlayerName}!{Environment.NewLine}Would you like to play another round?";
+                    }
+
+                    break;
+                case "Tie":
+                    message = $"Tie!{Environment.NewLine}Would you like to play another round?";
+                    break;
+            }
+            DialogResult result = MessageBox.Show(message, "",  MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 Game.NewGame();
