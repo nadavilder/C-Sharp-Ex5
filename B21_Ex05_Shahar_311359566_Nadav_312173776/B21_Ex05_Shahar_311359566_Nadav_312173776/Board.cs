@@ -168,7 +168,6 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
 
         public Move MakeMachineMove()
         {
-            Thread.Sleep(500);
             List<Move> availableMoves = this.GetAvailableMoves();
             Move chosenMove = availableMoves[m_rand.Next(availableMoves.Count)];
             this.UpdateBoard(chosenMove);

@@ -34,13 +34,13 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         {
             if (this.checkBox1.Checked)
             {
-                this.textBox2.Text = "";
+                this.textBox2.Text = string.Empty;
                 this.textBox2.BackColor = System.Drawing.SystemColors.Window;
                 this.textBox2.Enabled = true;
             }
             else
             {
-                this.textBox2.Text = "[Computer]";
+                this.textBox2.Text = "Computer";
                 this.textBox2.BackColor = System.Drawing.SystemColors.MenuBar;
                 this.textBox2.Enabled = false;
             }

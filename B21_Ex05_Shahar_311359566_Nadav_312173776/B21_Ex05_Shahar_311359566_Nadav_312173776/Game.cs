@@ -80,7 +80,6 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
                 m_TurnNum++;
                 if (!r_Players[m_TurnNum % 2].IsHumanPlayer)
                 {
-                    //Check why name won't be bold
                     m_GameUI.NewTurn(false);
                     MakeAiMove();
                 }
@@ -88,7 +87,6 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
                 {
                     m_GameUI.NewTurn(true);
                 }
-
             }
         }
 

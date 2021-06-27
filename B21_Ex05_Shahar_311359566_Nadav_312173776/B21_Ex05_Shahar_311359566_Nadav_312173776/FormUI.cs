@@ -38,14 +38,15 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         }
             else
             {
-                m_Player1Label.Font = new Font(m_Player2Label.Font, FontStyle.Regular);
+                m_Player1Label.Font = new Font(m_Player1Label.Font, FontStyle.Regular);
                 m_Player2Label.Font = new Font(m_Player2Label.Font, FontStyle.Bold);
             }
+
             if (i_HumanTurn)
             {
                 foreach(Button button in m_GameButtons)
                 {
-                    if(button.Text == String.Empty)
+                    if(button.Text == string.Empty)
                     {
                         button.Enabled = true;
                     }
@@ -56,7 +57,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
         public void EndGame(string i_Message)
         {
             this.Close();
-            string message = "";
+            string message = string.Empty;
             switch (i_Message)
             {
                 case "Lose":
@@ -74,14 +75,16 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
                     message = $"Tie!{Environment.NewLine}Would you like to play another round?";
                     break;
             }
-            DialogResult result = MessageBox.Show(message, "",  MessageBoxButtons.YesNo);
+
+            DialogResult result = MessageBox.Show(message, string.Empty,  MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 Game.NewGame();
             }
         }
 
-        private void m_button_Click(object sender, EventArgs e) {
+        private void m_button_Click(object sender, EventArgs e) 
+        {
             Button buttonWasClicked = (Button)sender;
             int rowIndex = Array.IndexOf(m_GameButtons, buttonWasClicked) / r_GameSize;
             int colIndex = Array.IndexOf(m_GameButtons, buttonWasClicked) % r_GameSize;

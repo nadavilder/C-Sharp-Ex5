@@ -37,7 +37,6 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
-            
             // 
             // label2
             // 
@@ -47,7 +46,6 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.label2.Size = new System.Drawing.Size(64, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Player 1:";
-
             // 
             // textBox1
             // 
@@ -55,7 +53,6 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(125, 27);
             this.textBox1.TabIndex = 2;
-            
             // 
             // textBox2
             // 
@@ -67,7 +64,6 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.textBox2.Size = new System.Drawing.Size(125, 27);
             this.textBox2.TabIndex = 3;
             this.textBox2.Text = "Computer";
-            
             // 
             // label4
             // 
@@ -77,7 +73,6 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.label4.Size = new System.Drawing.Size(58, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "Players:";
-            
             // 
             // checkBox1
             // 
@@ -89,7 +84,6 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.checkBox1.Text = "Player 2:";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.Click += checkBox1_Click;
-            
             // 
             // label3
             // 
@@ -99,7 +93,6 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.label3.Size = new System.Drawing.Size(83, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "Board Size:";
-            
             // 
             // numericUpDown1
             // 
@@ -108,12 +101,12 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             9,
             0,
             0,
-            0 });
+            0});
             this.numericUpDown1.Minimum = new decimal(new int[] {
             3,
             0,
             0,
-            0 });
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(45, 27);
             this.numericUpDown1.TabIndex = 8;
@@ -124,8 +117,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             3,
             0,
             0,
-            0 });
-            
+            0});
             // 
             // numericUpDown2
             // 
@@ -134,12 +126,12 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             9,
             0,
             0,
-            0 });
+            0});
             this.numericUpDown2.Minimum = new decimal(new int[] {
             3,
             0,
             0,
-            0 });
+            0});
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(45, 27);
             this.numericUpDown2.TabIndex = 9;
@@ -150,8 +142,7 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             3,
             0,
             0,
-            0 });
-            
+            0});
             // 
             // button1
             // 
@@ -162,7 +153,6 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.button1.Text = "Start!";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += button1_Click;
-            
             // 
             // label5
             // 
@@ -172,7 +162,6 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.label5.Size = new System.Drawing.Size(47, 20);
             this.label5.TabIndex = 11;
             this.label5.Text = "Rows:";
-            
             // 
             // label6
             // 
@@ -182,7 +171,6 @@ namespace B21_Ex05_Shahar_311359566_Nadav_312173776
             this.label6.Size = new System.Drawing.Size(40, 20);
             this.label6.TabIndex = 12;
             this.label6.Text = "Cols:";
-            
             // 
             // FormSettings
             // 
